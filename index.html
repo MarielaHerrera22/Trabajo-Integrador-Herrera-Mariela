@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Álbum de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Álbum de Pokémon</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Captura un Nuevo Pokémon</h2>
+            <form id="pokemonForm" class="pokemon-form">
+                <div class="form-group">
+                    <label for="pokemonName">Nombre del Pokémon:</label>
+                    <input type="text" id="pokemonName" required>
+                </div>
+                <div class="form-group">
+                    <label for="pokemonType">Tipo (Ej: Fuego, Agua, Planta):</label>
+                    <input type="text" id="pokemonType" required>
+                </div>
+                <div class="form-group">
+                    <label for="pokemonImage">URL de la Imagen:</label>
+                    <input type="url" id="pokemonImage" placeholder="https://ejemplo.com/pikachu.png" required>
+                </div>
+                <button type="submit">Agregar Pokémon</button>
+            </form>
+        </section>
+
+        <section class="album-section">
+            <h2>Mis Pokémon Capturados</h2>
+            <div id="pokemonAlbum" class="pokemon-album">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Álbum de Pokémon</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Azul claro Pokémon */
+    color: #333;
+}
+
+header {
+    background-color: #dfdb0f; /* Amarillo de la pokeball */
+    color: #2a75bb; /* Azul de la pokeball */
+    padding: 1.2rem 0;
+    text-align: center;
+    border-bottom: 5px solid #2a75bb;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 25px; /* Un poco más de espacio */
+}
+
+.form-section, .album-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    flex: 1;
+    min-width: 320px;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
+}
+
+.pokemon-form .form-group {
+    margin-bottom: 18px;
+}
+
+.pokemon-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #555;
+}
+
+.pokemon-form input[type="text"],
+.pokemon-form input[type="url"] {
+    width: calc(100% - 22px); /* Ajuste por padding */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.pokemon-form button {
+    background-color: #2a75bb; /* Azul de la pokeball */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pokemon-form button:hover {
+    background-color: #3c9dcf; /* Azul más claro al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+
+.pokemon-album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas si no llenan la fila */
+}
+
+.pokemon-card {
+    background-color: #e6f7ff; /* Fondo claro para las tarjetas */
+    border: 1px solid #a0d9ef;
+    border-radius: 10px;
+    padding: 18px;
+    width: calc(33.333% - 27px); /* Tres tarjetas por fila, ajustado por el gap */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card img {
+    max-width: 120px; /* Tamaño fijo para las imágenes de Pokémon */
+    height: auto;
+    border-radius: 50%; /* Imágenes circulares */
+    border: 3px solid #ffcb05; /* Borde amarillo */
+    margin-bottom: 15px;
+    background-color: white; /* Fondo blanco para las imágenes */
+}
+
+.pokemon-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #d32f2f; /* Rojo Pokémon */
+    font-size: 1.4rem;
+}
+
+.pokemon-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio */
+}
+
+.pokemon-card button {
+    background-color: #f44336; /* Rojo de eliminar */
+    color: white;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pokemon-card button:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 992px) {
+    .pokemon-card {
+        width: calc(50% - 25px); /* Dos tarjetas por fila en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Apila las secciones en móviles */
+    }
+    .pokemon-card {
+        width: 100%; /* Una tarjeta por fila en móviles */
+    }
+}
